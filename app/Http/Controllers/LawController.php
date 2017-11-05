@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Law;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use Symfony\Component\Process\Process;
 
 class LawController extends Controller
 {
@@ -38,8 +37,7 @@ class LawController extends Controller
     }
 
     public function refresh() {
-        exec('/usr/bin/python3 -m ~/Sites/compliance/app/Http/Controllers/Scripts/main.py', $output);
-        dd($output);
+        exec('python3 ~/Sites/compliance/app/Http/Controllers/Scripts/main.py');
         return redirect()->back();
     }
 }

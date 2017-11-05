@@ -17,7 +17,7 @@ connection = pymysql.connect(host='localhost',
                              charset='utf8mb4',
                              cursorclass=pymysql.cursors.DictCursor)
 
-def ocr_space_file(filename, overlay=False, api_key='a3ddc596e888957', language='eng'):
+def ocr_space_file(filename, overlay=False, api_key='api', language='eng'):
 
     payload = {'isOverlayRequired': overlay,
                'apikey': api_key,
